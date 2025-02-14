@@ -32,9 +32,9 @@ jobs:
       - name: Build up-core-api conan package
         shell: bash
         run: |
-          conan create up-core-api/release --version 1.6.0-alpha2
-          conan create up-core-api/release --version 1.6.0-alpha3
-          conan create up-core-api/release --version 1.6.0-alpha4
+          conan create --version 1.6.0-alpha2 up-core-api/release
+          conan create --version 1.6.0-alpha3 up-core-api/release
+          conan create --version 1.6.0-alpha4 up-core-api/release
         
 
       - name: Build up-cpp conan package
