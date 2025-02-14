@@ -28,11 +28,11 @@ jobs:
         shell: bash
         run: |
           ls -R  
-          
+
       - name: Fetch conan recipes
         uses: actions/checkout@v4
-        with:
-          path: up-conan-recipes-lukas-he
+        #with:
+        #  path: up-conan-recipes-lukas-he
           
 #       - name: Change to recipes directory
 #         shell: bash
