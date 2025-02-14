@@ -24,7 +24,6 @@ jobs:
         run: |
             pwd
         
-
       - name: Fetch conan recipes
         uses: actions/checkout@v4
         with:
@@ -42,6 +41,11 @@ jobs:
           cp up-conan-recipes-lukas-he/.github/workflows/ci_conan_profile "$(conan profile path default)"
           conan profile show
 
+      - name: List directory contents for debugging
+        shell: bash
+        run: |
+          ls -R up-core-api/release
+        
 
       - name: Build up-core-api conan package
         shell: bash
