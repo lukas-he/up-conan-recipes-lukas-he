@@ -19,15 +19,17 @@ jobs:
         with:
           version: 2.3.2
 
+      - name: Fetch conan recipes
+        uses: actions/checkout@v4
+      
       - name: Install conan CI profile
         shell: bash
         run: |
           conan profile detect
-          cp .github/workflows/ci_conan_profile "$(conan profile path default)"
+          cp up-conan-recipes-lukas-he/.github/workflows/ci_conan_profile "$(conan profile path default)"
           conan profile show
 
-      - name: Fetch conan recipes
-        uses: actions/checkout@v4
+
 
       - name: Build up-core-api conan package
         shell: bash
