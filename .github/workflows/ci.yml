@@ -44,7 +44,7 @@ jobs:
       - name: List directory contents for debugging
         shell: bash
         run: |
-          ls -R up-core-api/release
+          ls -R 
         
 
       - name: Build up-core-api conan package
