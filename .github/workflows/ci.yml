@@ -17,32 +17,10 @@ jobs:
         id: conan
         uses: turtlebrowser/get-conan@main
         with:
-          version: 2.3.2
-
-      - name: List where I am
-        shell: bash
-        run: |
-            pwd
-
-      - name: List directory contents for debugging
-        shell: bash
-        run: |
-          ls -R  
+          version: 2.3.2 
 
       - name: Fetch conan recipes
         uses: actions/checkout@v4
-        #with:
-        #  path: up-conan-recipes-lukas-he
-          
-#       - name: Change to recipes directory
-#         shell: bash
-#         run: |
-#           cd up-conan-recipes-lukas-he
-
-      - name: List where I am
-        shell: bash
-        run: |
-            pwd
       
       - name: Install conan CI profile
         shell: bash
@@ -50,12 +28,6 @@ jobs:
           conan profile detect
           cp .github/workflows/ci_conan_profile "$(conan profile path default)"
           conan profile show
-
-      - name: List directory contents for debugging
-        shell: bash
-        run: |
-          ls -R 
-        
 
       - name: Build up-core-api conan package
         shell: bash
@@ -118,6 +90,13 @@ jobs:
 
       - name: Fetch conan recipes
         uses: actions/checkout@v4
+
+      - name: Install conan CI profile
+        shell: bash
+        run: |
+          conan profile detect
+          cp .github/workflows/ci_conan_profile "$(conan profile path default)"
+          conan profile show
 
       - name: Build up-core-api conan package
         shell: bash
