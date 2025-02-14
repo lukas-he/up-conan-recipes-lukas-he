@@ -21,6 +21,9 @@ jobs:
 
       - name: Fetch conan recipes
         uses: actions/checkout@v4
+        with:
+          path: up-conan-recipes-lukas-he
+
       
       - name: Install conan CI profile
         shell: bash
