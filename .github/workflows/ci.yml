@@ -85,18 +85,18 @@ jobs:
         id: conan
         uses: turtlebrowser/get-conan@main
 
-      - name: Create default Conan profile
-        run: conan profile detect
+      #- name: Create default Conan profile
+      #  run: conan profile detect
 
       - name: Fetch conan recipes
         uses: actions/checkout@v4
 
-      - name: Install conan CI profile
-        shell: bash
-        run: |
-          conan profile detect
-          cp .github/workflows/ci_conan_profile "$(conan profile path default)"
-          conan profile show
+      #- name: Install conan CI profile
+      #  shell: bash
+      #  run: |
+      #    conan profile detect
+      #    cp .github/workflows/ci_conan_profile "$(conan profile path default)"
+      #    conan profile show
 
       - name: Build up-core-api conan package
         shell: bash
