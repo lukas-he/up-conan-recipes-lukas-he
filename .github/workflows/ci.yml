@@ -60,9 +60,9 @@ jobs:
       - name: Build up-core-api conan package
         shell: bash
         run: |
-          conan create up-conan-recipes-lukas-he/up-core-api/release --version 1.6.0-alpha2
-          conan create up-conan-recipes-lukas-he/up-core-api/release --version 1.6.0-alpha3
-          conan create up-conan-recipes-lukas-he/up-core-api/release --version 1.6.0-alpha4
+          conan create up-core-api/release --version 1.6.0-alpha2
+          conan create up-core-api/release --version 1.6.0-alpha3
+          conan create up-core-api/release --version 1.6.0-alpha4
         
 
       - name: Build up-cpp conan package
