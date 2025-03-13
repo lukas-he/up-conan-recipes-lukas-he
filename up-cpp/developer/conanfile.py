@@ -6,6 +6,7 @@ from conan.tools.files import copy
 
 class upCoreApiRecipe(ConanFile):
     name = "up-cpp"
+    version = "main"
 
     # Optional metadata
     license = "Apache-2.0"
