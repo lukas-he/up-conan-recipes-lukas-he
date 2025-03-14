@@ -29,7 +29,7 @@ class UpClientSocket(ConanFile):
             "fork": "eclipse-uprotocol/up-tck",
             "commitish": "main"}
 
-    requires = "up-core-api/[~1.6, include_prerelease]", "spdlog/[~1.13]", "protobuf/[~3.21]", "up-cpp/[^1.0, include_prerelease]", "fmt/10.2.1"
+    requires = "up-core-api/[~1.6, include_prerelease]", "spdlog/[~1.13]", "protobuf/[~3.21]", "up-cpp/main", "fmt/10.2.1"
 
     def init(self):
         self.fork = self.options.get_safe("fork", "eclipse-uprotocol/up-tck")
