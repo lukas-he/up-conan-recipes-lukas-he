@@ -6,6 +6,7 @@ from conan.tools.files import copy
 
 class upZenohTransportRecipe(ConanFile):
     name = "up-transport-zenoh-cpp"
+    version = "main"
 
     # Optional metadata
     license = "Apache-2.0"
