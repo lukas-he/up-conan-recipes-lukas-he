@@ -6,6 +6,7 @@ from conan.tools.files import copy
 
 class UpClientSocket(ConanFile):
     name = "up-transport-socket-cpp"
+    version = "main"
 
     # Optional metadata
     license = "Apache-2.0 license"
